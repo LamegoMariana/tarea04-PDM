@@ -32,7 +32,7 @@ Durante el desarrollo de App Tip Time, aprendí:
 
 A continuación, se presentan algunas capturas de pantalla de la aplicación:
 
-![Captura pantalla home_page](home_page.jpg)
+![Captura pantalla home_page](home_page.jpg){width=300 height=200}
 
 # tip_time
 
