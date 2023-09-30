@@ -32,6 +32,8 @@ Durante el desarrollo de App Tip Time, aprendí:
 
 A continuación, se presentan algunas capturas de pantalla de la aplicación:
 
+![Captura pantalla home_page](tarea04-PDM/home_page.jpg)
+
 # tip_time
 
 A new Flutter project.
