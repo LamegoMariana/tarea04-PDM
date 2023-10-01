@@ -18,10 +18,13 @@ class HomePage extends StatelessWidget {
           children: [
             const Text(''), // Divider
             TextField(
-              controller: context.watch<TiptimeProvider>().costoControl,
+              controller: context.watch<TiptimeProvider>().getCost,
               decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  label: Text('Cost of service'),
+                  label: Text(
+                    'Cost of service',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   prefixIcon: Icon(Icons.room_service)),
             ),
             const Text(''), // Divider
@@ -36,7 +39,7 @@ class HomePage extends StatelessWidget {
                 Text('     '),
                 Text(
                   'How was the service?',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -57,7 +60,8 @@ class HomePage extends StatelessWidget {
                         Text('     '),
                         Text(
                           'Round up tip',
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -68,7 +72,7 @@ class HomePage extends StatelessWidget {
                       .watch<TiptimeProvider>()
                       .currentSelectedSwitch, // Valor actual del Switch
                   onChanged: (bool value) {
-                    context.read<TiptimeProvider>().changeSwitch("falso");
+                    context.read<TiptimeProvider>().changeSwitch(value);
                   },
                 ),
               ],
@@ -84,6 +88,12 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text("Tip Amount: ${context.watch<TiptimeProvider>().getTip}"),
               ],
             )
           ],
